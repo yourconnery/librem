@@ -17,7 +17,8 @@ enum vidfmt {
 	VID_FMT_NV12,         /* planar YUV  4:2:0   12bpp UV interleaved  */
 	VID_FMT_NV21,         /* planar YUV  4:2:0   12bpp VU interleaved  */
 	/* marker */
-	VID_FMT_N
+	VID_FMT_N,
+	VID_FMT_H264	= 100 /* encoded H264 data with nal				   */
 };
 
 /** Video pixel format component description */

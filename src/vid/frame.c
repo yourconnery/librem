@@ -126,7 +126,11 @@ void vidframe_init_buf(struct vidframe *vf, enum vidfmt fmt,
 		vf->data[0] = buf;
 		vf->data[1] = vf->data[0] + vf->linesize[0] * sz->h;
 		break;
-
+	case VID_FMT_H264:
+		vf->linesize[0] = sz->w;
+		vf->data[0] = buf;
+		break;
+		
 	default:
 		(void)re_printf("vidframe: no fmt %s\n", vidfmt_name(fmt));
 		return;
